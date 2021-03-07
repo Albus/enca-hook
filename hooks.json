@@ -1,0 +1,39 @@
+[
+  {
+    "id": "enca",
+    "incoming-payload-content-type": "text/plain",
+    "execute-command": "/home/anton/Desktop/enca-hook/enca.sh",
+    "http-methods": ["POST"],
+    "include-command-output-in-response": true,
+    "include-command-output-in-response-on-error": true,
+    "pass-file-to-command":
+    [
+      {
+      	"source": "raw-request-body",
+ 	      "name": "data",
+      	"base64decode": true,
+        "envname": "data"
+      },
+      {
+      	"source": "header",
+ 	      "name": "Accept-Language",
+      	"base64decode": false,
+        "envname": "lang"
+      }
+    ],
+    "pass-arguments-to-command":
+    [
+      {
+        "source": "string",
+        "name": "-m"
+      }
+    ],
+    "pass-environment-to-command": [
+      {
+        "source": "string",
+        "envname": "LC_ALL",
+        "name": "C"
+      }
+    ]
+  }
+]
