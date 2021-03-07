@@ -2,7 +2,7 @@
   {
     "id": "enca",
     "incoming-payload-content-type": "text/plain",
-    "execute-command": "/home/anton/Desktop/enca-hook/enca.sh",
+    "execute-command": "/tmp/enca-hooks/enca.sh",
     "http-methods": ["POST"],
     "include-command-output-in-response": true,
     "include-command-output-in-response-on-error": true,
