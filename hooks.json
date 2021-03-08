@@ -25,7 +25,7 @@
     [
       {
         "source": "string",
-        "name": "-m"
+        "name": "-i"
       }
     ],
     "pass-environment-to-command": [
